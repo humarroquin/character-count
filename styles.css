@@ -1,4 +1,27 @@
 /* font files */
+@font-face {
+  font-display: swap;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/dm-sans-v16-latin-regular.woff2") format("woff2");
+}
+/* dm-sans-600 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url("./fonts/dm-sans-v16-latin-600.woff2") format("woff2");
+}
+/* dm-sans-700 - latin */
+@font-face {
+  font-display: swap;
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./fonts/dm-sans-v16-latin-700.woff2") format("woff2");
+}
 
 /* CSS RESET — Josh Comeau */
 *,
