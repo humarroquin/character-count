@@ -68,35 +68,60 @@ h6 {
 /* VARIABLES */
 :root {
   /* colors */
-  --clr-saturated-blue: hsl(225, 14%, 53%);
-  --clr-blue: hsl(206, 84%, 22%);
-  --clr-dark-blue: hsl(230, 60%, 8%);
-  --clr-turquoise: hsl(179, 80%, 58%);
-  --red: hsl(343, 100%, 58%);
-  --clr-white: hsl(0, 0%, 100%);
+  --neutral-900: #12131a;
+  --neutral-800: #21222c;
+  --neutral-700: #2a2b37;
+  --neutral-600: #404254;
+  --neutral-200: #e4e4ef;
+  --neutral-100: #f2f2f7;
+  --neutral-0: #ffffff;
+
+  --purple-400: #d3a0fa;
+  --purple-500: #c27cf8;
+  --yellow-500: #ff9f00;
+  --orange-500: #fe8159;
+  --orange-800: #da3701;
 
   /* font family */
-  --ff-headings: "Manrope", "Segoe UI", sans-serif;
-  --ff-body: "Manrope", "Segoe UI", sans-serif;
+  --ff-headings: "DM Sans", "Segoe UI", Roboto, sans-serif;
+  --ff-body: "DM Sans", "Segoe UI", Roboto, sans-serif;
 
   /* font weights */
   --fw-regular: 400;
-  --fw-semi-bold: 500;
-  --fw-extra-bold: 800;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
 
   /* fixed font sizes */
   --fs-15: 0.9375rem;
   --fs-18: 1.125rem;
 
   /* spacing */
-  --size-100: 1.188rem; /* 19px */
-  --size-200: 1.5rem; /* 24px */
-  --size-300: 2.625rem; /* 42px */
-  --size-350: 3rem; /* 48px */
-  --size-500: 4rem; /* 64px */
-  --size-600: 4.5rem; /* 72px */
-  --size-700: 4.5rem; /* 72px */
-  --size-800: 4.5rem; /* 72px */
+  --spacing-200: 1rem; /* 16px */
+  --spacing-250: 1.25rem; /* 20px */
+  --spacing-300: 1.5rem; /* 24px */
+  --spacing-400: 2rem; /* 32px */
+  --spacing-500: 2.5rem; /* 40px */
+  --spacing-600: 3rem; /* 48px */
+  --spacing-800: 4rem; /* 64px */
+  --spacing-1000: 5rem; /* 80px */
+
+  /* border radius */
+  --radius-10: 0.625rem; /* 10px */
+  --radius-12: 0.75rem; /* 12px */
+  --radius-16: 1rem; /* 16px */
+  --radius-20: 1.25rem; /* 20px */
+  --radius-24: 1.5rem; /* 24px */
+  --radius-full: 999px; /* Full pill/circle */
+
+  /* typography */
+  --text-16: 1rem;
+  --text-20: 1.25rem;
+  --text-24: 1.5rem;
+  --fluid-text-40-64: clamp(
+    2.5rem,
+    1.7346938775510203rem + 3.265306122448979vw,
+    4rem
+  );
 }
 
 /* Utility classes */
@@ -111,62 +136,16 @@ h6 {
   overflow: hidden;
 }
 
-.primary-heading,
-.secondary-heading,
-.tertiary-heading {
+/* headings */
+.primary-heading {
   font-family: var(--ff-headings);
+  font-size: 2.5rem;
+  font-size: var(--fluid-text-40-64);
   font-weight: var(--fw-extra-bold);
   line-height: 1.2;
-  color: var(--clr-white);
-}
-.primary-heading {
-  font-size: 2rem;
-  font-size: clamp(
-    2rem,
-    -0.24561403508771917rem + 4.678362573099415vw,
-    3rem
-  ); /* 48px-32px */
-}
-.secondary-heading {
-  font-size: 1.5rem;
-  font-size: clamp(
-    1.5rem,
-    0.3771929824561404rem + 2.3391812865497075vw,
-    2rem
-  ); /* 32px-24px */
-}
-.tertiary-heading {
-  font-size: var(--fs-18px);
 }
 
-.text-turquoise {
-  color: var(--clr-turquoise);
-}
-.text-faded {
-  opacity: 60%;
-}
-.text-sm {
-  font-size: 15px;
-  font-weight: var(--fw-regular);
-}
-
-.button {
-  border: 2px solid var(--clr-turquoise);
-  padding: 10px 18px;
-  border-radius: 50rem;
-  background-color: var(--clr-turquoise);
-  font-weight: var(--fw-extra-bold);
-  font-size: var(--fs-15px);
-  color: var(--clr-blue);
-  cursor: pointer;
-  transition: all 0.5s ease-in-out;
-}
-.button:is(:hover, :active) {
-  background-color: var(--clr-dark-blue);
-  border-color: turquoise;
-  color: var(--clr-white);
-}
-
+/* grids & displays */
 .grid-2cols,
 .grid-4cols {
   display: grid;
@@ -186,6 +165,7 @@ h6 {
   gap: 30px;
 }
 
+/* wrapper & containers */
 .container {
   --max-width: 75rem;
   --padding: 1rem;
@@ -203,9 +183,9 @@ body {
   -webkit-font-smoothing: antialiased;
   /* css reset */
 
-  font-size: 1rem;
+  font-size: var(--text-16);
   font-family: var(--ff-body);
   font-weight: var(--fw-regular);
-  background-color: var(--clr-dark-blue);
-  color: var(--clr-saturated-blue);
+  background-color: var(--neutral-0);
+  color: var(--neutral-600);
 }
