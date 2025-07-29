@@ -9,12 +9,66 @@
   </head>
   <body>
     <header class="header">
-      <img src="./" alt="">
+      <img src="./images/logo-light-theme.svg" alt="Character Count" />
+      <button class="dark-mode" aria-label="Toggle dark mode">
+        <img src="./images/icon-moon.svg" alt="" role="presentation" />
+      </button>
     </header>
     <main class="main">
-      <header class="main-header">
-        <h1 class="primary-heading">Analyze your text in real-time.</h1>
-      </header>
+      <section>
+        <header>
+          <h1 class="primary-heading">Analyze your text in real-time.</h1>
+        </header>
+        <!-- text-area -->
+        <div class="input-group">
+          <label for="analyze-area"
+            >Type or paste your text here to be analyzed</label
+          >
+          <textarea
+            name="analyze-text"
+            id="analyze-area"
+            placeholder="Type or paste your text here to be analyzed"
+          ></textarea>
+        </div>
+        <!-- controls -->
+        <div class="controls">
+          <fieldset class="controls">
+            <input type="checkbox" id="exclude-spaces" name="exclude-spaces" />
+            <label for="exclude-spaces">Exclude spaces</label>
+            <input
+              type="checkbox"
+              id="character-limit"
+              name="character-limit"
+            />
+            <label for="character-limit">Set a character limit</label>
+          </fieldset>
+          <p>Aprox. reading time <span id="reading-time">0</span></p>
+        </div>
+      </section>
+      <section>
+        <h2>Count Results</h2>
+        <div>
+          <!-- card-1 -->
+          <div class="results-card">
+            <p id="char-count" aria-live="polite">0</p>
+            <h3>Total characters</h3>
+          </div>
+          <!-- card-2 -->
+          <div class="results-card">
+            <p id="total-count" aria-live="polite">0</p>
+            <h3>Word count</h3>
+          </div>
+          <!-- card-3 -->
+          <div class="results-card">
+            <p id="sentence-count" aria-live="polite">0</p>
+            <h3>Sentence count</h3>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>Letter density</h2>
+        
+      </section>
     </main>
   </body>
 </html>
