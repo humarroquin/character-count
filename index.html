@@ -8,26 +8,25 @@
     <title>Character counter - Frontend Mentor</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header container d-flex">
       <img src="./images/logo-light-theme.svg" alt="Character Count" />
       <button class="dark-mode" aria-label="Toggle dark mode">
         <img src="./images/icon-moon.svg" alt="" role="presentation" />
       </button>
     </header>
     <main class="main">
-      <section>
-        <header>
-          <h1 class="primary-heading">Analyze your text in real-time.</h1>
-        </header>
+      <section class="container">
+        <h1 class="primary-heading">Analyze your text in real-time.</h1>
         <!-- text-area -->
         <div class="input-group">
-          <label for="analyze-area"
+          <label for="text-area" class="sr-only"
             >Type or paste your text here to be analyzed</label
           >
           <textarea
-            name="analyze-text"
-            id="analyze-area"
-            placeholder="Type or paste your text here to be analyzed"
+            name="text-area"
+            id="text-area"
+            class="text-area"
+            placeholder="Start typing here… (or paste your text)"
           ></textarea>
         </div>
         <!-- controls -->
@@ -67,7 +66,6 @@
       </section>
       <section>
         <h2>Letter density</h2>
-        
       </section>
     </main>
   </body>

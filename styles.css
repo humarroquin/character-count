@@ -68,19 +68,19 @@ h6 {
 /* VARIABLES */
 :root {
   /* colors */
-  --neutral-900: #12131a;
-  --neutral-800: #21222c;
-  --neutral-700: #2a2b37;
-  --neutral-600: #404254;
-  --neutral-200: #e4e4ef;
-  --neutral-100: #f2f2f7;
-  --neutral-0: #ffffff;
+  --neutral-900: hsl(233, 18%, 9%);
+  --neutral-800: hsl(235, 14%, 15%);
+  --neutral-700: hsl(235, 13%, 19%);
+  --neutral-600: hsl(234, 14%, 29%);
+  --neutral-200: hsl(240, 26%, 92%);
+  --neutral-100: hsl(240, 24%, 96%);
+  --neutral-0: hsl(0, 0%, 100%);
 
-  --purple-400: #d3a0fa;
-  --purple-500: #c27cf8;
-  --yellow-500: #ff9f00;
-  --orange-500: #fe8159;
-  --orange-800: #da3701;
+  --purple-400: hsl(274, 90%, 80%);
+  --purple-500: hsl(274, 90%, 73%);
+  --yellow-500: hsl(37, 100%, 50%);
+  --orange-500: hsl(15, 99%, 67%);
+  --orange-800: hsl(15, 99%, 43%);
 
   /* font family */
   --ff-headings: "DM Sans", "Segoe UI", Roboto, sans-serif;
@@ -125,6 +125,10 @@ h6 {
 }
 
 /* Utility classes */
+.d-flex {
+  display: flex;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -138,11 +142,16 @@ h6 {
 
 /* headings */
 .primary-heading {
+  text-align: center;
   font-family: var(--ff-headings);
   font-size: 2.5rem;
   font-size: var(--fluid-text-40-64);
-  font-weight: var(--fw-extra-bold);
+  font-weight: var(--fw-bold);
   line-height: 1.2;
+  max-width: 13ch;
+  margin-inline: auto;
+
+  margin-block: var(--spacing-600);
 }
 
 /* grids & displays */
@@ -188,4 +197,22 @@ body {
   font-weight: var(--fw-regular);
   background-color: var(--neutral-0);
   color: var(--neutral-600);
+}
+
+.header {
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--spacing-400);
+}
+
+.text-area {
+  width: 100%;
+  height: calc(200 / 16 * 1rem);
+  overflow-y: scroll;
+  background-color: var(--neutral-100);
+  color: var(--neutral-700);
+  padding: var(--spacing-250);
+  border-radius: var(--radius-12);
+  border: 2px solid var(--neutral-200);
+  resize: none;
 }
