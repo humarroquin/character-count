@@ -30,8 +30,8 @@
           ></textarea>
         </div>
         <!-- controls -->
-        <div class="controls">
-          <fieldset class="controls">
+        <div class="controls-wrapper d-flex">
+          <fieldset class="left-controls">
             <input type="checkbox" id="exclude-spaces" name="exclude-spaces" />
             <label for="exclude-spaces">Exclude spaces</label>
             <input
@@ -44,22 +44,22 @@
           <p>Aprox. reading time <span id="reading-time">0</span></p>
         </div>
       </section>
-      <section>
-        <h2>Count Results</h2>
-        <div>
+      <section class="results-container container">
+        <h2 class="sr-only">Text Results</h2>
+        <div class="info-dash-board grid-3cols">
           <!-- card-1 -->
           <div class="results-card">
-            <p id="char-count" aria-live="polite">0</p>
+            <p id="char-count" aria-live="polite" class="numbers">00</p>
             <h3>Total characters</h3>
           </div>
           <!-- card-2 -->
           <div class="results-card">
-            <p id="total-count" aria-live="polite">0</p>
+            <p id="total-count" aria-live="polite" class="numbers">00</p>
             <h3>Word count</h3>
           </div>
           <!-- card-3 -->
           <div class="results-card">
-            <p id="sentence-count" aria-live="polite">0</p>
+            <p id="sentence-count" aria-live="polite" class="numbers">00</p>
             <h3>Sentence count</h3>
           </div>
         </div>
