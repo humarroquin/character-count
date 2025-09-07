@@ -207,10 +207,14 @@ body {
 .controls-wrapper {
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  padding-inline: 1rem;
+  gap: 0.5rem;
 }
 
 .controls-wrapper .left-controls {
   border: 0;
+  padding: 0;
 }
 
 .results-card {

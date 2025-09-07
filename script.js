@@ -24,6 +24,5 @@ textArea.addEventListener("input", () => {
 
   const wpm = 200;
   const readingTime = Math.ceil(wordCount.length / wpm);
-  console.log(readingTime);
   readingTimeDisplay.textContent = readingTime < 1 ? "< 1" : readingTime;
 });
